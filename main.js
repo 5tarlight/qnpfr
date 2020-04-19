@@ -1,3 +1,7 @@
-const path = process.argv[2]
+const fs = require('fs')
 
-console.log(path)
+const target = process.argv[2]
+
+if(!fs.existsSync(target)) {
+  console.error('파일이 존재하지 않습니다.')
+}

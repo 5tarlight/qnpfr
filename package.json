@@ -1,0 +1,11 @@
+{
+  "name": "qnpfr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:5tarlight/qnpfr.git",
+  "author": "Kim Kyu San <developerstarlight@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

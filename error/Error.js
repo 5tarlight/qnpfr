@@ -1,3 +1,5 @@
+require('colors')
+
 class Error {
   stack
   name
@@ -5,10 +7,16 @@ class Error {
   /**
    * @param {string} name
    */
-  constructor(name, _dirname, _filename) {
+  constructor(name, _filename) {
     this.name = name
-    this.stack = _dirname + _filename
+    this.stack = _filename
   }
 }
 
+function throwErr(error) {
+  console.error(`${error.stack} 에서 오류가 발생했습니다.`.bgRed.white)
+  console.error(error.name)
+}
+
 module.exports = Error
+module.exports.throw = throwErr

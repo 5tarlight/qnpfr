@@ -16,6 +16,8 @@ class Error {
 function throwErr(error) {
   console.error(`${error.stack} 에서 오류가 발생했습니다.`.bgRed.white)
   console.error(error.name)
+
+  process.exit(-1)
 }
 
 module.exports = Error
